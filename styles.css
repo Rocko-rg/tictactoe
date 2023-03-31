@@ -1,0 +1,238 @@
+
+:root{
+    --dark-aqua-gray: #16242c;
+    --aqua-gray: #1f3641;
+    --gray: #4c5b63;
+    --lite-gray: #839aa6;
+    --aqua: #1ab3a3;
+    --pink: #e9268b;
+    --white: #ebeff0;
+}
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    background-color: var(--dark-aqua-gray);
+    font-family: 'Poppins', sans-serif;
+}
+.background{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+.counters_div{
+    width: 390px;
+    height: 40px;
+    margin: 30px 10px 40px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.turn_x, .turn_o{
+    color: var(--pink);
+    font-size: 14px;
+}
+.div_x, .div_o{
+    width: 180px;
+    height: 100%;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.div_x{
+    border-bottom: 1px solid var(--pink);
+}
+.player_x, .player_o{
+    font-size: 30px;
+    height: 100%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+
+}
+.player_x{
+    color: var(--pink);
+}
+.player_o{
+    color: var(--white);
+}
+.turn_x, .turn_o{
+    margin: 0;
+}
+.score_x, .score_o{
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--lite-gray);
+    margin: 0 10px;
+}
+.container{
+    width: 400px;
+    height: 400px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.6s;
+}
+.dv{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--aqua-gray);
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 45px;
+    box-shadow: 5px 10px 7px #0000006e;
+    transition: 0.1s;
+    cursor:pointer;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+.dv:active{
+    box-shadow: 1px 5px 4px #0000006e;
+    margin-bottom: -5px;
+}
+.btns_div{
+    width: 390px;
+    height: 40px ;
+    margin: 40px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.new_round, .new_game{
+    width: 180px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--aqua-gray);
+    border: none;
+    color: var(--aqua);
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 1px 5px 4px #0000006e;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.1s;
+    cursor:pointer;
+}
+.new_round:active, .new_game:active{
+    box-shadow: 1px 3px 2px #0000006e;
+    margin-top: 2px;
+}
+
+@media screen and (max-width: 576px){
+    .counters_div{
+        width: 350px;
+        height: 38px;
+        margin: 30px 10px 35px 10px;
+    }
+    .div_x, .div_o{
+        width: 160px;
+    }
+    .player_x, .player_o{
+        font-size: 28px;
+        margin: 0 8px;
+    }
+    .score_x, .score_o{
+        font-size: 18px;
+        margin: 0 8px;
+    }
+    .turn_x, .turn_o{
+        font-size: 13px;
+    }
+    .container{
+        width: 360px;
+        height: 360px; 
+    }
+    .dv{
+        width: 108px;
+        height: 108px;
+        font-size: 42px;
+        box-shadow: 4px 8px 6px #0000006e;
+        transition: 0.1s;
+    }
+    .dv:active{
+        box-shadow: 1px 4px 3px #0000006e;
+        margin-bottom: -4px;
+    }
+    .btns_div{
+        width: 350px;
+        height: 38px;
+        margin: 35px 10px;
+    }
+    .new_round, .new_game{
+        width: 160px;
+        font-size: 13px;
+        box-shadow: 1px 4px 3px #0000006e;
+    }
+    .new_round:active, .new_game:active{
+        box-shadow: 1px 3px 2px #0000006e;
+        margin-top: 1.5px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .counters_div{
+        width: 290px;
+        height: 34px;
+        margin: 30px 10px 30px 10px;
+    }
+    .div_x, .div_o{
+        width: 130px;
+    }
+    .player_x, .player_o{
+        font-size: 24px;
+        margin: 0 7px;
+    }
+    .score_x, .score_o{
+        font-size: 16px;
+        margin: 0 7px;
+    }
+    .turn_x, .turn_o{
+        font-size: 12px;
+    }
+    .container{
+        width: 300px;
+        height: 300px; 
+    }
+    .dv{
+        width: 90px;
+        height: 90px;
+        font-size: 38px;
+        box-shadow: 3px 7px 5px #0000006e;
+        transition: 0.1s;
+    }
+    .dv:active{
+        box-shadow: 1px 3px 3px #0000006e;
+        margin-bottom: -3px;
+    }
+    .btns_div{
+        width: 290px;
+        height: 34px;
+        margin: 30px 10px;
+    }
+    .new_round, .new_game{
+        width: 130px;
+        font-size: 12px;
+        box-shadow: 1px 3px 3px #0000006e;
+    }
+    .new_round:active, .new_game:active{
+        box-shadow: 1px 2px 2px #0000006e;
+        margin-top: 1px;
+    }
+}
